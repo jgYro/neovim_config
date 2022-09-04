@@ -30,10 +30,27 @@ return require('packer').startup(function(use)
 
   -- Treesitter
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use 'nvim-treesitter/nvim-treesitter-textobjects'
-  use 'lewis6991/nvim-treesitter-context'
-  use 'nvim-treesitter/playground'
-  use 'p00f/nvim-ts-rainbow'
+  use {'nvim-treesitter/nvim-treesitter-textobjects'}
+  use {'lewis6991/nvim-treesitter-context'}
+  use {'nvim-treesitter/playground'}
+  use {'p00f/nvim-ts-rainbow'}
+
+  use {'neovim/nvim-lspconfig'}
+
+  -- Autocompletion plugin(s)
+  use {'hrsh7th/cmp-nvim-lsp'}
+  use {'hrsh7th/cmp-buffer'}
+  use {'hrsh7th/cmp-path'}
+  use {'hrsh7th/cmp-cmdline'}
+  use {'hrsh7th/nvim-cmp'}
+  use {'hrsh7th/cmp-nvim-lsp-signature-help'}
+
+  -- Lua snip
+  use { "L3MON4D3/LuaSnip", run = "make install_jsregexp" }
+  use {'saadparwaiz1/cmp_luasnip'}
+
+  -- Color Scheme
+  use {'folke/tokyonight.nvim'}
   
   ---------------------------------------
 

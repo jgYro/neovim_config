@@ -91,3 +91,31 @@ vim.api.nvim_set_keymap('n', '<leader>fr', '<cmd>Telescope lsp_references<cr>', 
 ---------------------------------------------------------------------
 -- Run Packer Profile
 vim.api.nvim_set_keymap('n', '<leader>pp', '<cmd>PackerProfile<cr>', OPTIONS)
+
+---------------------------------------------------------------------
+--.____                     _________      .__        
+--|    |    __ _______     /   _____/ ____ |__|_____  
+--|    |   |  |  \__  \    \_____  \ /    \|  \____ \ 
+--|    |___|  |  // __ \_  /        \   |  \  |  |_> >
+--|_______ \____/(____  / /_______  /___|  /__|   __/ 
+--        \/          \/          \/     \/   |__|
+---------------------------------------------------------------------
+-- local ls = require "luasnip"
+
+-- vim.keymap.set({ "i", "s" }, "<c-k>", function()
+--     if ls.expand_or_jumpable() then
+--         ls.expand_or_jump()
+--     end
+-- end, {silent = true})
+
+-- vim.keymap.set({ "i", "s" }, "<c-j>", function()
+--     if ls.jumpable(-1) then
+--         ls.jump(-1)
+--     end
+-- end, {silent = true})
+
+-- vim.keymap.set({ "i", "s" }, "<c-l>", function()
+--     if ls.choice_activate() then
+--         ls.change_choice(1)
+--     end
+-- end)

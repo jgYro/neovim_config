@@ -1,5 +1,6 @@
 require 'plugins'
 require 'ts'
+require 'lsp'
 require 'keybinds'
 require 'default'
 require 'Yro'
