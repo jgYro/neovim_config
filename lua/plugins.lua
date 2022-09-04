@@ -20,10 +20,7 @@ return require('packer').startup(function(use)
 
   use {'stevearc/dressing.nvim'}
 
-  use {
-      'kdheepak/lazygit.nvim',
-      cmd = 'Lazygit'
-  }
+  use {'kdheepak/lazygit.nvim',}
 
   use {'tpope/vim-commentary'}
 

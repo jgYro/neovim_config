@@ -90,11 +90,8 @@ _G.packer_plugins = {
     url = "https://github.com/stevearc/dressing.nvim"
   },
   ["lazygit.nvim"] = {
-    commands = { "Lazygit" },
-    loaded = false,
-    needs_bufread = true,
-    only_cond = false,
-    path = "/Users/yro/.local/share/nvim/site/pack/packer/opt/lazygit.nvim",
+    loaded = true,
+    path = "/Users/yro/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
     url = "https://github.com/kdheepak/lazygit.nvim"
   },
   ["nvim-treesitter"] = {
@@ -145,12 +142,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
-
--- Command lazy-loads
-time([[Defining lazy-load commands]], true)
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file Lazygit lua require("packer.load")({'lazygit.nvim'}, { cmd = "Lazygit", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-time([[Defining lazy-load commands]], false)
-
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
