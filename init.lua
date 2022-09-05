@@ -1,7 +1,7 @@
 require 'plugins'
 require 'default'
 require 'ts'
-require 'lsp'
+require '/LSP/lsp'
 require 'keybinds'
 require 'Yro'
 require 'dap-config'

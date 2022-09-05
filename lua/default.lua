@@ -1,4 +1,5 @@
 -- Set VIM defaults
+vim.opt.tm = 0
 vim.opt.relativenumber = true
 vim.opt.number = true
 vim.opt.swapfile = false

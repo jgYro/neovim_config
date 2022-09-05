@@ -59,6 +59,9 @@ return require('packer').startup(function(use)
   use {'theHamsta/nvim-dap-virtual-text'}
   use {'nvim-telescope/telescope-dap.nvim'}
   use {'nvim-telescope/telescope-ui-select.nvim'}
+
+  -- Awesome pop-up for key commands
+  use {'folke/which-key.nvim'}
   ---------------------------------------
 
 end)

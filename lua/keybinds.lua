@@ -135,3 +135,4 @@ vim.keymap.set("n", "<leader>drc", ":lua require'dap'.reverse_continue()<CR>")
 vim.keymap.set("n", "<leader>dsv", ":lua require'dap'.step_over()<CR>")
 vim.keymap.set("n", "<leader>di", ":lua require'dap'.step_into()<CR>")
 vim.keymap.set("n", "<leader>dso", ":lua require'dap'.step_out()<CR>")
+

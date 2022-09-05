@@ -58,21 +58,22 @@ cmp.setup.cmdline(':', {
 
 
 -- Setup lspconfig.
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-capabilities.textDocument.completion.completionItem.snippetSupport = true
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 
 -- on_attach for mapping keys only when the LSP attaches to the buffer
 local on_attach = function(client, bufnr)
-    -- require "lsp-format".on_attach(client)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', OPTIONS)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gv', '<cmd>vsplit<CR><cmd>lua vim.lsp.buf.definition()<CR>', OPTIONS)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', OPTIONS)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', OPTIONS)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', OPTIONS)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', OPTIONS)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k', '<cmd>lua vim.lsp.buf.signature_help()<CR>', OPTIONS)
-    vim.api.nvim_buf_set_keymap(bufnr, 'i', '<C-k', '<cmd>lua vim.lsp.buf.signature_help()<CR>', OPTIONS)
+  -- Enable completion triggered by <C-X><C-O>
+  -- See `:help omnifunc` and `:help ins-completion` for more information.
+  vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+
+  -- Use LSP as the handler for formatexpr.
+  -- See `:help formatexpr` for more information.
+  vim.api.nvim_buf_set_option(0, "formatexpr", "v:lua.vim.lsp.formatexpr()")
+
+  -- Configure key mappings
+  require("LSP.lsp_keybinds").setup(client, bufnr)
 
 end
 
