@@ -1,5 +1,6 @@
 require 'plugins'
 require 'default'
+require 'witch'
 require 'ts'
 require '/LSP/lsp'
 require 'keybinds'
