@@ -35,6 +35,7 @@ return require('packer').startup(function(use)
   use {'nvim-treesitter/playground'}
   use {'p00f/nvim-ts-rainbow'}
 
+  -- LSP
   use {'neovim/nvim-lspconfig'}
 
   -- Autocompletion plugin(s)
@@ -62,6 +63,12 @@ return require('packer').startup(function(use)
 
   -- Awesome pop-up for key commands
   use {'folke/which-key.nvim'}
+
+  -- VS-Code Pictograms
+  use {'onsails/lspkind.nvim'}
+
+  -- File Icons
+  use {'kyazdani42/nvim-web-devicons'}
   ---------------------------------------
 
 end)

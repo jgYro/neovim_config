@@ -18,3 +18,4 @@ vim.g["python3_host_prog"] = "/Library/Frameworks/Python.framework/Versions/3.10
 vim.o.background = "dark"
 vim.cmd[[colorscheme tokyonight]]
 
+require'nvim-web-devicons'.setup {}

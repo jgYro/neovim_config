@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/Users/yro/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
     url = "https://github.com/kdheepak/lazygit.nvim"
   },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/Users/yro/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    url = "https://github.com/glepnir/lspsaga.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/yro/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -218,6 +223,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/yro/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/Users/yro/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 
