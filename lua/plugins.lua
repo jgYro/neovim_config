@@ -52,6 +52,13 @@ return require('packer').startup(function(use)
   -- Color Scheme
   use {'folke/tokyonight.nvim'}
   
+  -- Debugger plugins
+  use {'mfussenegger/nvim-dap-python'}
+  use {'mfussenegger/nvim-dap'}
+  use {'rcarriga/nvim-dap-ui'}
+  use {'theHamsta/nvim-dap-virtual-text'}
+  use {'nvim-telescope/telescope-dap.nvim'}
+  use {'nvim-telescope/telescope-ui-select.nvim'}
   ---------------------------------------
 
 end)

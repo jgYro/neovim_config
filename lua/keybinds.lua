@@ -119,3 +119,19 @@ vim.api.nvim_set_keymap('n', '<leader>pp', '<cmd>PackerProfile<cr>', OPTIONS)
 --         ls.change_choice(1)
 --     end
 -- end)
+---------------------------------------------------------------------
+--________        ___.                       .__                  __      __.__  __    ________                 
+--\______ \   ____\_ |__  __ __  ____   ____ |__| ____    ____   /  \    /  \__|/  |_  \______ \ _____  ______  
+-- |    |  \_/ __ \| __ \|  |  \/ ___\ / ___\|  |/    \  / ___\  \   \/\/   /  \   __\  |    |  \\__  \ \____ \ 
+-- |    `   \  ___/| \_\ \  |  / /_/  > /_/  >  |   |  \/ /_/  >  \        /|  ||  |    |    `   \/ __ \|  |_> >
+--/_______  /\___  >___  /____/\___  /\___  /|__|___|  /\___  /    \__/\  / |__||__|   /_______  (____  /   __/ 
+--        \/     \/    \/     /_____//_____/         \//_____/          \/                     \/     \/|__|    
+---------------------------------------------------------------------
+vim.keymap.set("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>")
+vim.keymap.set("n", "<leader>rdb", ":RustDebuggables<CR>")
+vim.keymap.set("n", "<leader>dc", ":lua require'dap'.continue()<CR>")
+vim.keymap.set("n", "<leader>dt", ":lua require'dap'.terminate()<CR>")
+vim.keymap.set("n", "<leader>drc", ":lua require'dap'.reverse_continue()<CR>")
+vim.keymap.set("n", "<leader>dsv", ":lua require'dap'.step_over()<CR>")
+vim.keymap.set("n", "<leader>di", ":lua require'dap'.step_into()<CR>")
+vim.keymap.set("n", "<leader>dso", ":lua require'dap'.step_out()<CR>")
