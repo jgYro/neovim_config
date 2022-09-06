@@ -152,3 +152,12 @@ require('lspconfig')['pylsp'].setup {
         }
     }
 }
+
+local rt = require("rust-tools")
+
+rt.setup({
+  server = {
+    on_attach = on_attach,
+    capabilities = capabilities
+  },
+})
