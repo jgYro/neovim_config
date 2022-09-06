@@ -129,10 +129,10 @@ _G.packer_plugins = {
     path = "/Users/yro/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
     url = "https://github.com/kdheepak/lazygit.nvim"
   },
-  ["lspsaga.nvim"] = {
+  ["lspkind.nvim"] = {
     loaded = true,
-    path = "/Users/yro/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
-    url = "https://github.com/glepnir/lspsaga.nvim"
+    path = "/Users/yro/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
+    url = "https://github.com/onsails/lspkind.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -184,6 +184,11 @@ _G.packer_plugins = {
     path = "/Users/yro/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
     url = "https://github.com/p00f/nvim-ts-rainbow"
   },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/Users/yro/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/yro/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -198,6 +203,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/yro/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["rust-tools.nvim"] = {
+    loaded = true,
+    path = "/Users/yro/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
   },
   ["telescope-dap.nvim"] = {
     loaded = true,

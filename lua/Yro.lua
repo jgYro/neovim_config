@@ -1,4 +1,4 @@
-local curl = require "plenary.curl"
+-- local curl = require "plenary.curl"
 
 --local res = curl.get("https://jsonplaceholder.typicode.com/todos", {
 --    accept = "application/json",
