@@ -70,6 +70,17 @@ return require('packer').startup(function(use)
 
   -- File Icons
   use {'kyazdani42/nvim-web-devicons'}
+
+  -- Internet in vim?
+  use {
+      "nvim-telescope/telescope-arecibo.nvim",
+      rocks = {"openssl", "lua-http-parser"}
+    }
+
+  -- Better terminal
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup()
+  end}
   ---------------------------------------
 
 end)

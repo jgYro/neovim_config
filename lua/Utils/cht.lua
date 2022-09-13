@@ -1,47 +1,36 @@
 local M = {}
 
-function M.cht()
-  vim.ui.input({ prompt = "cht.sh input: " }, function(input)
+function M.so_input()
+  local buf = vim.api.nvim_get_current_buf()
+  lang = ""
+  file_type = vim.api.nvim_buf_get_option(buf, "filetype")
+  vim.ui.input({ prompt = "so input: ", default = file_type .. " " }, function(input)
     local cmd = ""
     if input == "" or not input then
       return
     elseif input == "h" then
-      cmd = ""
+      cmd = "-h"
     else
-      local lang = ""
-      local search = ""
-      local delimiter = " "
-      for w in (input .. delimiter):gmatch("(.-)" .. delimiter) do
-        if lang == "" then
-          lang = w
-        else
-          if search == "" then
-            search = w
-          else
-            search = search .. "+" .. w
-          end
-        end
-      end
-      cmd = lang
-      if search ~= "" then
-        cmd = cmd .. "/" .. search
-      end
+      cmd = input
     end
-    M.cht_cmd(cmd)
+    M.so_cmd(cmd)
   end)
 end
 
-function M.cht_cmd(cmd)
+local function open_split()
   vim.api.nvim_exec("vnew", true)
   vim.api.nvim_exec("terminal", true)
   local buf = vim.api.nvim_get_current_buf()
   vim.api.nvim_buf_set_name(buf, "cheatsheet-" .. buf)
   vim.api.nvim_buf_set_option(buf, "filetype", "cheat")
+  vim.api.nvim_buf_set_option(buf, "syntax", lang)
+end
 
+function M.so_cmd(cmd)
+  open_split()
   local chan_id = vim.b.terminal_job_id
-  local cht_cmd = "curl cht.sh/" .. cmd
-  vim.api.nvim_chan_send(chan_id, cht_cmd .. "\r\n")
-  vim.cmd [[stopinsert]]
+  local so_cmd = "so " .. cmd
+  vim.api.nvim_chan_send(chan_id, so_cmd .. "\n")
 end
 
 return M
