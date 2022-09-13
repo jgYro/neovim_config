@@ -23,6 +23,7 @@ require'nvim-web-devicons'.setup {}
 
 require'dressing'.setup({
     input = {
-        prompt_align = "center"
+        prompt_align = "center",
+        relative = "win"
     }
 })
