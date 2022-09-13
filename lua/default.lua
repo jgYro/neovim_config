@@ -1,5 +1,6 @@
 -- Set VIM defaults
 vim.opt.tm = 0
+vim.opt.scrollback = 100000
 vim.opt.relativenumber = true
 vim.opt.number = true
 vim.opt.swapfile = false
@@ -19,3 +20,9 @@ vim.o.background = "dark"
 vim.cmd[[colorscheme tokyonight]]
 
 require'nvim-web-devicons'.setup {}
+
+require'dressing'.setup({
+    input = {
+        prompt_align = "center"
+    }
+})

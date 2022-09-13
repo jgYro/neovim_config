@@ -15,6 +15,13 @@ wk.register({
     v = {
         name = "VIM Config",
         i = { "<cmd>e $MYVIMRC<cr>", "Edit VIMRC" }, 
+        t = { "<cmd>e ~/.config/nvim/lua/ts.lua<cr>", "Edit Treesitter Config" }, 
+        w = { "<cmd>e ~/.config/nvim/lua/witch.lua<cr>", "Edit Which-Key Config" }, 
+        d = { "<cmd>e ~/.config/nvim/lua/default.lua<cr>", "Edit Neovim Defaults" }, 
+        p = { "<cmd>e ~/.config/nvim/lua/plugins.lua<cr>", "Add/Remove Plugins" }, 
+        d = { "<cmd>e ~/.config/nvim/lua/dap-config.lua<cr>", "Edit DAP Config" }, 
+        k = { "<cmd>e ~/.config/nvim/lua/keybinds.lua<cr>", "Edit Neovim Keybinds" }, 
+        l = { "<cmd>lua require('yro_telescope').Cd(\'$HOME/.config/nvim/lua/\')<cr>", "Edit Neovim Keybinds" }, 
         s = { "<cmd>:w <cr><cmd>so %<cr>", "Source Current File" }, 
     },
 
@@ -49,6 +56,12 @@ wk.register({
     t = {
         name = "Terminal",
         t = { "<cmd>split<CR><cmd>terminal<CR><C-w>j a", "Open Termal" }, 
+    },
+
+    s = {
+        name = "Search",
+        c = { "<Cmd>lua require('utils.cht').cht()<cr>", "Code" },
+
     },
      
 
