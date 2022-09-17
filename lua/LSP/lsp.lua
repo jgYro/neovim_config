@@ -161,3 +161,8 @@ rt.setup({
     capabilities = capabilities
   },
 })
+
+require'lspconfig'.dartls.setup{
+    on_attach = on_attach,
+    capabilities = capabilities
+}

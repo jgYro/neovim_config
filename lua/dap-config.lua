@@ -5,7 +5,6 @@ local dap = require('dap')
       command = '/opt/homebrew/opt/llvm/bin/lldb-vscode',
       name = 'lldb'
     }
-    local dap = require('dap')
     dap.configurations.rust = {
       {
         name = 'Launch',
