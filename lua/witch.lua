@@ -62,7 +62,7 @@ wk.register({
         name = "Search",
         c = { "<Cmd>lua require('Utils.cht').so_input()<cr>", "cht.sh" },
         s = { "<Cmd>lua require('Utils.term').so()<cr>", "Stack Overflow" },
-        w = { "<Cmd>lua require('telescope').extensions.arecibo.websearch()<cr>", "Web" },
+        -- w = { "<Cmd>lua require('telescope').extensions.arecibo.websearch()<cr>", "Web" },
 
     },
      
