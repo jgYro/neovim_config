@@ -54,16 +54,30 @@ wk.register({
     },
 
     t = {
-        name = "Terminal",
+        name = "Terminal & Treesitter",
         t = { "<cmd>split<CR><cmd>terminal<CR><C-w>j a", "Open Termal" }, 
+        s = { "+Treesitter" },
+        sc = { "+Select Class" },
+        sf = { "+Select Function" },
+        sl = { "+Select Loop" },
+        sp = { "+Select Loop" },
+        sp = { "<cmd>TSPlaygroundToggle<CR>", "TS Playground" }, 
+        sci = { "<cmd>TSTextobjectSelect @class.inner<CR>", "Inner" }, 
+        sco = { "<cmd>TSTextobjectSelect @class.outer<CR>", "Outer" }, 
+        sfi = { "<cmd>TSTextobjectSelect @function.inner<CR>", "Inner" }, 
+        sfo = { "<cmd>TSTextobjectSelect @function.outer<CR>", "Outer" }, 
+        sli = { "<cmd>TSTextobjectSelect @loop.inner<CR>", "Inner" }, 
+        slo = { "<cmd>TSTextobjectSelect @loop.outer<CR>", "Outer" }, 
+        spi = { "<cmd>TSTextobjectSelect @parameter.inner<CR>", "Inner" }, 
+        spo = { "<cmd>TSTextobjectSelect @parameter.outer<CR>", "Outer" }, 
     },
+
+
 
     s = {
         name = "Search",
         c = { "<Cmd>lua require('Utils.cht').so_input()<cr>", "cht.sh" },
         s = { "<Cmd>lua require('Utils.term').so()<cr>", "Stack Overflow" },
-        -- w = { "<Cmd>lua require('telescope').extensions.arecibo.websearch()<cr>", "Web" },
-
     },
      
 

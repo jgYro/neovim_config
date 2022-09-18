@@ -72,10 +72,7 @@ return require('packer').startup(function(use)
   use {'kyazdani42/nvim-web-devicons'}
 
   -- Internet in vim?
-  use {
-      "nvim-telescope/telescope-arecibo.nvim",
-      rocks = {"openssl", "lua-http-parser"}
-    }
+  use {"nvim-telescope/telescope-arecibo.nvim"}
 
   -- Better terminal
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
