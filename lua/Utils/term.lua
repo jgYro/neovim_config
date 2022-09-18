@@ -40,4 +40,23 @@ function M.so()
   end)
 end
 
+------------------ Wikipedia ----------------------------
+function M.wiki()
+  local buf = vim.api.nvim_get_current_buf()
+  lang = ""
+  vim.ui.input({ prompt = "wiki input: "}, function(input)
+    local cmd = ""
+    if input == "" or not input then
+      return
+    elseif input == "h" then
+      cmd = "--help"
+    else
+      cmd = "\"" .. input .. "\""
+    end
+    cmd = "wiki-tui " .. cmd
+    print(cmd)
+    M.open_term(cmd, { direction = "float" })
+  end)
+end
+
 return M

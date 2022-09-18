@@ -1,0 +1,10 @@
+2022-09-17T22:14:42.880247-04:00 INFO wiki_tui::logging - successfully initialized the logging system
+2022-09-17T22:14:42.880417-04:00 INFO wiki_tui - searching for the article: hello world
+2022-09-17T22:14:42.885297-04:00 INFO wiki_tui::ui::search - on_search was called
+2022-09-17T22:14:42.885320-04:00 INFO wiki_tui::ui::search - searching for 'hello world'
+2022-09-17T22:14:42.885329-04:00 INFO wiki_tui::wiki::search::builder - search was called
+2022-09-17T22:14:43.213726-04:00 INFO wiki_tui::wiki::search::builder - search finished successfully
+2022-09-17T22:14:43.213886-04:00 INFO wiki_tui::ui::search - displaying '10' out of '18151' search results
+2022-09-17T22:14:43.214012-04:00 INFO wiki_tui::ui::search - on_search finished successfully
+2022-09-17T22:14:43.214048-04:00 INFO wiki_tui::ui::search - on_result_select was called with the item '"Hello, World!" program', page id: '13834'
+2022-09-17T22:14:43.214108-04:00 INFO wiki_tui::ui::search - on_result_select finished successfully
