@@ -87,6 +87,15 @@ return require('packer').startup(function(use)
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim"
 }
+
+  -- Colors
+  use { 'mrshmllow/document-color.nvim', config = function()
+      require("document-color").setup {
+        -- Default options
+        mode = "background", -- "background" | "foreground" | "single"
+      }
+  end
+}
   ---------------------------------------
 
 end)
