@@ -8,6 +8,8 @@ wk.register({
         m = { "<cmd>Telescope man_pages<cr>", "Search Man Pages" }, 
         d = { "<cmd>Telescope find_files<cr>", "Diagnostics" }, 
         r = { "<cmd>Telescope find_files<cr>", "LSP Ref Under Cursor" }, 
+        s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" }, 
+        w = { "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", "Document Symbols" }, 
         t = { "<cmd>Telescope<cr>", "Telescope Things" }, 
         m = { "<cmd>Telescope keymaps<cr>", "Keymaps" }, 
     },
