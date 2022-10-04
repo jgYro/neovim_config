@@ -166,3 +166,20 @@ require'lspconfig'.dartls.setup{
     on_attach = on_attach,
     capabilities = capabilities
 }
+
+require'lspconfig'.tsserver.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+  cmd = { "typescript-language-server", "--stdio" }
+}
+
+require("mason").setup()
+require("mason-lspconfig").setup({
+    "tailwindcss"
+})
+require'lspconfig'.tailwindcss.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+

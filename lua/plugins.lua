@@ -74,10 +74,19 @@ return require('packer').startup(function(use)
   -- Internet in vim?
   use {"nvim-telescope/telescope-arecibo.nvim"}
 
+  -- React Tags
+  use {"windwp/nvim-ts-autotag"}
+
   -- Better terminal
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
     require("toggleterm").setup()
   end}
+
+  -- Tailwind
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim"
+}
   ---------------------------------------
 
 end)
