@@ -54,4 +54,5 @@ function M.setup(client, bufnr)
   keymappings(client, bufnr)
 end
 
+
 return M

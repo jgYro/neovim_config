@@ -96,6 +96,12 @@ return require('packer').startup(function(use)
       }
   end
 }
+
+  -- Snippets again
+  use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"})
+  use "rafamadriz/friendly-snippets"
+
+
   ---------------------------------------
 
 end)
