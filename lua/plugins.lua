@@ -9,9 +9,12 @@ return require('packer').startup(function(use)
 
   local packer = require "packer"
   packer.init(conf)
+  require'impatient'.enable_profile()
   ---------------------------------------
 
   use 'wbthomason/packer.nvim'
+
+  use {'lewis6991/impatient.nvim'}
 
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -46,10 +49,6 @@ return require('packer').startup(function(use)
   use {'hrsh7th/cmp-cmdline'}
   use {'hrsh7th/nvim-cmp'}
   use {'hrsh7th/cmp-nvim-lsp-signature-help'}
-
-  -- Lua snip
-  use { "L3MON4D3/LuaSnip", run = "make install_jsregexp" }
-  use {'saadparwaiz1/cmp_luasnip'}
 
   -- Color Scheme
   use {'folke/tokyonight.nvim'}
@@ -100,6 +99,7 @@ return require('packer').startup(function(use)
   -- Snippets again
   use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"})
   use "rafamadriz/friendly-snippets"
+  use {'saadparwaiz1/cmp_luasnip'}
 
 
   ---------------------------------------

@@ -18,19 +18,3 @@ local fmta = require("luasnip.extras.fmt").fmta
 local types = require("luasnip.util.types")
 local conds = require("luasnip.extras.conditions")
 local conds_expand = require("luasnip.extras.conditions.expand")
-
-ls.add_snippets("all",
-    {
-        -- Example just for basic
-        s("test", {t("-- test")}) ,
-
-        -- This could be incredibly powerful
-        s("trig", c(1, {
-            t("one"),
-            t("two"),
-            t("three"),
-        }))
-    }
-)
-
-one
