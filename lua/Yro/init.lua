@@ -1,0 +1,6 @@
+require("Yro.Native.Set")
+require("Yro.Native.Remap")
+require("Yro.Plugins.Packer")
+require("Yro.Plugins.LSP")
+require("Yro.Plugins.Treesitter")
+require("Yro.Plugins.Telescope")
