@@ -14,10 +14,10 @@ require('packer').startup(function(use)
     use {
         'nvim-telescope/telescope.nvim',
         requires = {
-          'nvim-lua/plenary.nvim',
-          { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
+            'nvim-lua/plenary.nvim',
+            { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
         },
-      }
+    }
 
 
     use({
@@ -53,10 +53,16 @@ require('packer').startup(function(use)
         }
     }
 
+    -- Debugger plugins
+    use { 'mfussenegger/nvim-dap-python' }
+    use { 'mfussenegger/nvim-dap' }
+    use { 'rcarriga/nvim-dap-ui' }
+    use { 'theHamsta/nvim-dap-virtual-text' }
+    use { 'nvim-telescope/telescope-dap.nvim' }
+    use { 'nvim-telescope/telescope-ui-select.nvim' }
+
     use('mbbill/undotree')
     use('theprimeagen/harpoon')
     use { 'kdheepak/lazygit.nvim' }
     use { 'tpope/vim-commentary' }
-
-
 end)
