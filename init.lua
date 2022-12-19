@@ -19,6 +19,9 @@ if vim.fn.empty(vim.fn.glob("~/.config/nvim/lua")) > 0 then
     -- Get "Plugins" "LSP" config
     vim.fn.execute("! mkdir -p lua/Yro/Plugins/LSP && curl https://raw.githubusercontent.com/jgYro/neovim_config/master/lua/Yro/Plugins/LSP/init.lua >> lua/Yro/Plugins/LSP/init.lua")
 
+    -- Get "Plugins" "DAP" config
+    vim.fn.execute("! mkdir -p lua/Yro/Plugins/DAP && curl https://raw.githubusercontent.com/jgYro/neovim_config/master/lua/Yro/Plugins/DAP/init.lua >> lua/Yro/Plugins/DAP/init.lua")
+
     -- Require Sets module in Yro's init.lua
     vim.fn.execute("! curl https://raw.githubusercontent.com/jgYro/neovim_config/master/lua/Yro/init.lua >> lua/Yro/init.lua")
 end
