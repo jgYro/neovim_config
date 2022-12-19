@@ -25,6 +25,9 @@ if vim.fn.empty(vim.fn.glob("~/.config/nvim/lua")) > 0 then
     -- Get "Plugins" "Packer" config
     vim.fn.execute("! mkdir -p lua/Yro/Plugins/Packer && curl https://raw.githubusercontent.com/jgYro/neovim_config/master/lua/Yro/Plugins/Packer/init.lua >> lua/Yro/Plugins/Packer/init.lua")
 
+    -- Get "Plugins" "Regexplainer" config
+    vim.fn.execute("! mkdir -p lua/Yro/Plugins/Regexplainer && curl https://raw.githubusercontent.com/jgYro/neovim_config/master/lua/Yro/Plugins/Regexplainer/init.lua >> lua/Yro/Plugins/Regexplainer/init.lua")
+
     -- Get "Plugins" "Telescope" config
     vim.fn.execute("! mkdir -p lua/Yro/Plugins/Telescope && curl https://raw.githubusercontent.com/jgYro/neovim_config/master/lua/Yro/Plugins/Telescope/init.lua >> lua/Yro/Plugins/Telescope/init.lua")
 

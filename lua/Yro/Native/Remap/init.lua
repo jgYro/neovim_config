@@ -37,3 +37,15 @@ vim.keymap.set('n', '<leader>y', '<cmd>:vsplit<CR><cmd>:term<CR>a')
 
 -- Switch to normal mode in terminal
 vim.keymap.set('t', '<C-n>', '<C-|><C-n>')
+
+-- Process selected text via shell command (Output below)
+vim.keymap.set("x", "<leader>shs", ":'<,'>:w !")
+
+-- Process selected text via shell command (Replace selected text in buffer)
+vim.keymap.set("x", "<leader>shr", ":'<,'>:!")
+
+-- Process selected text via shell command (Place output below line)
+vim.keymap.set("x", "<leader>shb", "yPgv:'<,'>:!")
+
+-- Begin find and replace over selection
+vim.keymap.set("x", "<leader>fr", ":'<,'>:s/")
