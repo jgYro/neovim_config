@@ -10,7 +10,13 @@ lsp.ensure_installed({
     'rust_analyzer',
 })
 
-lsp.setup_servers({'dartls', force = true})
+lsp.configure('dartls', {
+    force_setup = true,
+    root_dir = function(fname)
+        return vim.fn.getcwd()
+    end
+})
+lsp.setup_servers({ 'dartls', force = true })
 
 -- Make runtime files discoverable to the server
 local runtime_path = vim.split(package.path, ';')
