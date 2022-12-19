@@ -16,6 +16,9 @@ if vim.fn.empty(vim.fn.glob("~/.config/nvim/lua")) > 0 then
     -- Get "Plugins" "Harpoon" config
     vim.fn.execute("! mkdir -p lua/Yro/Plugins/Harpoon && curl https://raw.githubusercontent.com/jgYro/neovim_config/master/lua/Yro/Plugins/Harpoon/init.lua >> lua/Yro/Plugins/Harpoon/init.lua")
 
+    -- Get "Plugins" "Lazygit" config
+    vim.fn.execute("! mkdir -p lua/Yro/Plugins/Lazygit && curl https://raw.githubusercontent.com/jgYro/neovim_config/master/lua/Yro/Plugins/Lazygit/init.lua >> lua/Yro/Plugins/Lazygit/init.lua")
+
     -- Get "Plugins" "LSP" config
     vim.fn.execute("! mkdir -p lua/Yro/Plugins/LSP && curl https://raw.githubusercontent.com/jgYro/neovim_config/master/lua/Yro/Plugins/LSP/init.lua >> lua/Yro/Plugins/LSP/init.lua")
 

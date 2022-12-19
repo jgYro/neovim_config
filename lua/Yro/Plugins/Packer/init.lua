@@ -32,6 +32,8 @@ require('packer').startup(function(use)
     --Treesitter stuff
     use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
     use('nvim-treesitter/playground')
+    use { 'p00f/nvim-ts-rainbow' }
+
 
     -- LSP setup easy mode
     use {
@@ -78,4 +80,12 @@ require('packer').startup(function(use)
 
     -- Autopairs
     use { 'windwp/nvim-autopairs' }
+
+    -- REGEX
+    use { 'bennypowers/nvim-regexplainer',
+      config = function() require'regexplainer'.setup() end,
+      requires = {
+        'nvim-treesitter/nvim-treesitter',
+        'MunifTanjim/nui.nvim',
+      } }
 end)
