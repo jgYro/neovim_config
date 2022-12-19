@@ -11,6 +11,7 @@ require('packer').startup(function(use)
     -- Package manager
     use 'wbthomason/packer.nvim'
 
+    -- Telescoe everything
     use {
         'nvim-telescope/telescope.nvim',
         requires = {
@@ -19,7 +20,7 @@ require('packer').startup(function(use)
         },
     }
 
-
+    -- Colorscheme just works
     use({
         'rose-pine/neovim',
         as = 'rose-pine',
@@ -28,9 +29,11 @@ require('packer').startup(function(use)
         end
     })
 
+    --Treesitter stuff
     use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
     use('nvim-treesitter/playground')
 
+    -- LSP setup easy mode
     use {
         'VonHeikemen/lsp-zero.nvim',
         requires = {
@@ -61,8 +64,18 @@ require('packer').startup(function(use)
     use { 'nvim-telescope/telescope-dap.nvim' }
     use { 'nvim-telescope/telescope-ui-select.nvim' }
 
+    -- See changes in file kinda without GIT
     use('mbbill/undotree')
+
+    -- This plugin lowkey insane
     use('theprimeagen/harpoon')
+
+    -- Love lazygit
     use { 'kdheepak/lazygit.nvim' }
+
+    -- So used to "gcc" for commenting things
     use { 'tpope/vim-commentary' }
+
+    -- Autopairs
+    use { 'windwp/nvim-autopairs' }
 end)

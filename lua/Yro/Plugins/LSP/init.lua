@@ -44,6 +44,11 @@ lsp.configure('sumneko_lua', {
 
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+cmp.event:on(
+    'confirm_done',
+    cmp_autopairs.on_confirm_done()
+)
 local cmp_mappings = lsp.defaults.cmp_mappings({
     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
     ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
@@ -89,12 +94,6 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, opts)
     vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
 end)
-
--- require("flutter-tools").setup{
---     lsp = {
---         on_attach = on_attach
---     }
--- }
 
 lsp.setup()
 
