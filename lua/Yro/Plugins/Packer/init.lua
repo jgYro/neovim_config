@@ -88,4 +88,7 @@ require('packer').startup(function(use)
         'nvim-treesitter/nvim-treesitter',
         'MunifTanjim/nui.nvim',
       } }
+    
+    -- Show Colors
+    use { "norcalli/nvim-colorizer.lua" }
 end)

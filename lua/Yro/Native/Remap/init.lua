@@ -48,4 +48,4 @@ vim.keymap.set("x", "<leader>shr", ":'<,'>:!")
 vim.keymap.set("x", "<leader>shb", "yPgv:'<,'>:!")
 
 -- Begin find and replace over selection
-vim.keymap.set("x", "<leader>fr", ":'<,'>:s/")
+vim.keymap.set("x", "<leader>fr", ":s/")
