@@ -91,4 +91,6 @@ require('packer').startup(function(use)
     
     -- Show Colors
     use { "norcalli/nvim-colorizer.lua" }
+    -- Tmux navigation
+    use { "christoomey/vim-tmux-navigator" }
 end)

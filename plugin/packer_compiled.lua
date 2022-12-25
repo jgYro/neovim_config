@@ -149,6 +149,11 @@ _G.packer_plugins = {
     path = "/Users/yro/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/Users/yro/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
+  },
   ["nvim-dap"] = {
     loaded = true,
     path = "/Users/yro/.local/share/nvim/site/pack/packer/start/nvim-dap",
@@ -240,6 +245,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/yro/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
+  },
+  ["vim-tmux-navigator"] = {
+    loaded = true,
+    path = "/Users/yro/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
+    url = "https://github.com/christoomey/vim-tmux-navigator"
   }
 }
 
