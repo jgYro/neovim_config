@@ -91,6 +91,15 @@ require('packer').startup(function(use)
     
     -- Show Colors
     use { "norcalli/nvim-colorizer.lua" }
+
     -- Tmux navigation
     use { "christoomey/vim-tmux-navigator" }
+
+    use {
+        'debugloop/telescope-undo.nvim',
+        requires = { 'nvim-telescope/telescope.nvim' },
+        config = function()
+            require("telescope").load_extension("undo")
+        end,
+    }
 end)
